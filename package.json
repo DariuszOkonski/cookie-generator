@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "npx nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,3 +14,4 @@
     "express-handlebars": "^6.0.6"
   }
 }
+// day 14 time 11:45

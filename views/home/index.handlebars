@@ -1,19 +1,23 @@
 <h1>Configure your cookie</h1>
 
-<h2>Select cookie base</h2>
 
-<div> 
-    {{#each bases}}
-        <a class="cookie-button" href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
-    {{/each}}
+<div class="cookies-container">
+    <div>
+        <h2>Select cookie base</h2>
+        <div> 
+            {{#each bases}}
+                <a class="cookie-button" href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
+            {{/each}}
+        </div>
+
+        <h2>Select your favorite addons</h2>
+        <div>
+            {{#each addons}}
+                <a class="cookie-button" href="/configurator/select-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
+            {{/each}}
+        </div>
+    </div>
+    <div>
+        {{> cookie-preview}}
+    </div>
 </div>
-
-<h2>Select your favorite addons</h2>
-
-<div>
-    {{#each addons}}
-        <a class="cookie-button" href="/configurator/select-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
-    {{/each}}
-</div>
-
-{{> cookie-preview}}
