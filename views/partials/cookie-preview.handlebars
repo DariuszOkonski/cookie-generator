@@ -1,0 +1,13 @@
+{{log 'cookie' cookie}}
+{{log 'bases' bases}}
+{{log 'addons' addons}}
+
+{{#with cookie}}
+    <div 
+        class="cookie-preview" 
+        style="background: 
+        {{#each addons}}url('/assets/images/{{this}}.png'), {{/each}} 
+        url('/assets/images/empty-{{base}}.png'); 
+        background-size: cover">
+    </div>
+{{/with}}
