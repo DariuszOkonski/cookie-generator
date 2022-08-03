@@ -10,9 +10,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 .logo {
   max-width: 700px;
-  margin: 0 auto 0 0;
+  margin: 0 auto;
 }
 
 .logo img {
@@ -49,6 +53,24 @@ body {
   max-width: 280px;
   margin: 5px;
   text-align: center;
+}
+
+.selected-items {
+  max-width: 700px;
+  margin: 10px auto;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cookie-border {
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
 }
 
 footer {

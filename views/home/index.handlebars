@@ -1,23 +1,27 @@
 <h1>Configure your cookie</h1>
 
-
 <div class="cookies-container">
-    <div>
-        <h2>Select cookie base</h2>
-        <div> 
-            {{#each bases}}
-                <a class="cookie-button" href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
-            {{/each}}
-        </div>
+    <div class="cookie-border">
+        <h2>{{upper "Select cookie base"}}</h2>
+        {{> base-selector}}
 
-        <h2>Select your favorite addons</h2>
+        <h2>{{upper "Select your favorite addons"}}</h2>
         <div>
             {{#each addons}}
                 <a class="cookie-button" href="/configurator/select-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
             {{/each}}
         </div>
     </div>
-    <div>
-        {{> cookie-preview}}
+    <div class="cookie-border">
+        {{#if cookie.base}}
+            {{> cookie-preview}}
+        {{else}}
+            <p><strong>Please select base of your cookie to se it's preview and price summary</strong></p>
+            {{> base-selector}}
+        {{/if}}
     </div>
 </div>
+
+{{#if cookie.base}}
+    {{> addons}}
+{{/if}}
