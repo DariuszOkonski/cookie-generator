@@ -1,4 +1,4 @@
-const { COOKIE_BASES } = require("./data/cookies-data");
+const { COOKIE_BASES } = require("../data/cookies-data");
 
 const handlebarsHelpers = {
   upper: (str) => str.toUpperCase(),
@@ -13,6 +13,7 @@ const handlebarsHelpers = {
     return price;
   },
   pricify: (price) => price.toFixed(2),
+  isNotInArray: (array, element) => !array.includes(element),
 };
 
 module.exports = {

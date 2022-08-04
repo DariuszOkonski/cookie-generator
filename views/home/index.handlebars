@@ -8,7 +8,10 @@
         <h2>{{upper "Select your favorite addons"}}</h2>
         <div>
             {{#each addons}}
-                <a class="cookie-button" href="/configurator/select-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
+                {{#if (isNotInArray @root.cookie.addons this.[0])}}
+             
+                    <a class="cookie-button" href="/configurator/add-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
+                {{/if}}
             {{/each}}
         </div>
     </div>
