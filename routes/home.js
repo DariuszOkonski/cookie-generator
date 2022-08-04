@@ -25,7 +25,7 @@ homeRouter.get("/", (req, res) => {
     },
     bases: Object.entries(COOKIE_BASES),
     addons: Object.entries(COOKIE_ADDONS),
-    sum: sum,
+    sum,
   });
 });
 

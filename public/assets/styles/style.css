@@ -67,6 +67,7 @@ h1 {
 }
 
 .btn-go-home {
+  display: inline-block;
   background-color: green;
   margin: 10px;
 }
@@ -104,4 +105,15 @@ footer {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.summary {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
