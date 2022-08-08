@@ -7,7 +7,7 @@
 
         <h2>{{upper "Select your favorite addons"}}</h2>
         <div>
-            {{#each addons}}
+            {{#each allAddons}}
                 {{#if (isNotInArray @root.cookie.addons this.[0])}}
              
                     <a class="cookie-button" href="/configurator/add-addons/{{this.[0]}}">Select {{this.[0]}} for {{this.[1]}} PLN</a>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="cookie-border">
-        {{#if cookie.base}}
+        {{#if cookie.allBases}}
             {{> cookie-preview}}
         {{else}}
             <p><strong>Please select base of your cookie to se it's preview and price summary</strong></p>
